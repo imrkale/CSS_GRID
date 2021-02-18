@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: monospace;
+  line-height: 1.4em;
+  background-color: black;
+}
+.container {
+  max-width: 1200px;
+  height: auto;
+  margin: auto;
+  background-color: whitesmoke;
+}
+.logo {
+  background-image: url("https://resources.pulse.icc-cricket.com/photo-resources/2019/05/23/ed71c7c0-8dec-4612-a632-0e77405b2980/World-Cup-2019.jpg?width=2000&height=600");
+  display: flex;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: fit-content;
+  background-color: #e0e0e0;
+  justify-content: center;
+}
+.logo > img {
+  object-fit: contain;
+  padding: 20px;
+}
+.grid-item > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.grid {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(220px, auto);
+  grid-gap: 10px;
+  padding: 5px;
+  padding-top: 10px;
+}
+.grid-item {
+  background-color: #ddd;
+  transition: transform 0.4s ease-in-out;
+}
+.grid-item:hover {
+  transform: scale(0.95);
+  box-shadow: 0px 5px 15px grey;
+}
+.grid-item-two {
+  grid-column: 2/4;
+  grid-row: 1/3;
+}
+.grid-item-four {
+  grid-row: 3/5;
+}
+.grid-item-eight {
+  grid-column: 3/4;
+  grid-row: 4/6;
+}
+
+.grid-item-nine {
+  grid-column: 1/3;
+  grid-row: 5/7;
+}
